@@ -87,6 +87,15 @@ color:white;
 background:#f97316;
 color:white;
 }
+.cat-mexico{
+background:#ef4444;
+color:white;
+}
+
+.cat-salud{
+background:#10b981;
+color:white;
+}
 
 .category-btn:hover{
 transform:scale(1.1);
