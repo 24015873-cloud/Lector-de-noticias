@@ -4,6 +4,29 @@ const body=document.getElementById('appBody')
 const searchInput=document.getElementById('searchInput')
 const refreshBtn=document.getElementById('refreshBtn')
 
+const sliderImg=document.getElementById("sliderImg")
+
+/* SLIDER */
+
+const sliderImages=[
+"https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/4730/live/ef3437a0-1f1f-11f1-a600-6bf0292beaaf.jpg.webp",
+"https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/5a15/live/dd561510-1cc4-11f1-a77f-65f2fdb37c23.jpg.webp",
+"https://images-assets.nasa.gov/image/KSC-20230920-PH-FMX01_0467/KSC-20230920-PH-FMX01_0467~large.jpg"
+]
+
+let slide=0
+
+setInterval(()=>{
+
+slide++
+
+if(slide>=sliderImages.length)slide=0
+
+sliderImg.src=sliderImages[slide]
+
+},4000)
+
+
 const news={
 
 articles:[
@@ -52,9 +75,11 @@ category:"cultura"
 
 }
 
+
 function setTheme(name){
 body.className=name+" min-h-screen"
 }
+
 
 function renderNews(articles){
 
@@ -65,15 +90,16 @@ articles.forEach(article=>{
 const date=new Date(article.publishedAt)
 .toLocaleDateString("es-ES",{day:'numeric',month:'short'})
 
+
 const card=`
 
 <article class="news-card rounded-lg overflow-hidden shadow-md flex flex-col">
 
-<div class="relative h-48 overflow-hidden">
+<div class="relative overflow-hidden">
 
-<img src="${article.urlToImage}" class="w-full h-full object-cover">
+<img src="${article.urlToImage}" class="w-full object-cover">
 
-<span class="absolute top-4 left-4 bg-black/70 text-white text-[9px] px-2 py-1 rounded uppercase font-black">
+<span class="absolute top-3 left-3 bg-black/70 text-white text-[9px] px-2 py-1 rounded uppercase font-black">
 
 ${article.category}
 
@@ -81,7 +107,7 @@ ${article.category}
 
 </div>
 
-<div class="p-6 flex-grow">
+<div class="p-5 flex-grow">
 
 <div class="flex justify-between mb-3 text-xs font-bold">
 
@@ -105,9 +131,10 @@ ${article.description}
 
 </div>
 
-<div class="px-6 pb-6">
+<div class="px-5 pb-5">
 
 <a href="${article.url}" target="_blank"
+
 class="accent-btn block text-center py-3 rounded text-xs font-black uppercase">
 
 Ir a la fuente
@@ -124,6 +151,7 @@ newsGrid.insertAdjacentHTML("beforeend",card)
 })
 
 }
+
 
 function fetchNews(category="all"){
 
@@ -143,6 +171,7 @@ statusMessage.classList.add("hidden")
 
 }
 
+
 document.querySelectorAll(".category-btn").forEach(btn=>{
 
 btn.addEventListener("click",e=>{
@@ -152,6 +181,7 @@ fetchNews(e.target.dataset.category)
 })
 
 })
+
 
 searchInput.addEventListener("input",e=>{
 
@@ -166,6 +196,7 @@ card.style.display=card.innerText.toLowerCase().includes(term)
 })
 
 })
+
 
 document.getElementById("btn-prof").onclick=()=>setTheme("theme-professional")
 document.getElementById("btn-mod").onclick=()=>setTheme("theme-modern")
