@@ -37,7 +37,7 @@ const mockNews = {
             "source": { "name": "Periódico AM" },
             "publishedAt": "2026-03-16T07:45:00Z",
             "url": "https://www.am.com.mx/superdeportivo/2026/03/15/guanajuato-define-seleccion-de-clavados-tras-exitoso-selectivo-nacional-en-leon-1764966.html",
-            "category": "mexico" "educación"
+            "category": "mexico"
         },
         {
             "title": "El renacimiento de las lenguas indígenas en las escuelas",
