@@ -1,45 +1,63 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Noticias Express - Tarea Educativa</title>
+
+<title>Noticias Express</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
+
 <link rel="stylesheet" href="styles.css">
 
 </head>
 
-<body id="appBody" class="theme-professional min-h-screen transition-all duration-500">
+
+<body id="appBody" class="theme-professional min-h-screen">
 
 <!-- HEADER -->
-<header class="text-white shadow-xl sticky top-0 z-50 header-bg">
+
+<header class="header-bg text-white shadow-xl sticky top-0 z-50">
+
 <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
 
 <div class="flex items-center gap-3">
-<div class="bg-white/20 p-2 rounded-lg">
-📰
-</div>
-<h1 class="text-xl font-black tracking-tighter uppercase">
+
+<div class="logo-box">📰</div>
+
+<h1 class="text-xl font-black uppercase tracking-tighter">
 Noticias Express
 </h1>
+
 </div>
+
 
 <div class="mt-4 md:mt-0 flex gap-2">
-<input type="text" id="searchInput"
-placeholder="Buscar..."
-class="px-4 py-2 rounded text-gray-800 w-48 md:w-64">
 
-<button id="refreshBtn"
-class="accent-btn px-6 py-2 rounded font-bold uppercase text-xs">
+<input
+type="text"
+id="searchInput"
+placeholder="Buscar noticia..."
+class="px-4 py-2 rounded text-gray-800 w-48 md:w-64"
+/>
+
+<button
+id="refreshBtn"
+class="accent-btn px-6 py-2 rounded text-xs font-black uppercase"
+>
 Actualizar
 </button>
+
 </div>
 
 </div>
+
 </header>
 
-<!-- CAMBIADOR DE TEMA -->
+
+<!-- CAMBIO DE TEMA -->
+
 <div class="container mx-auto px-4 pt-6 flex justify-center md:justify-end gap-3 items-center">
 
 <span class="text-xs opacity-50 uppercase">
@@ -54,14 +72,20 @@ Tema
 
 
 <!-- SLIDER DESTACADO -->
+
 <section class="container mx-auto px-4 py-8">
 
-<div id="slider" class="slider">
+<div class="slider">
 
-<img id="sliderImg" src="https://picsum.photos/1200/400?1">
+<img
+id="sliderImg"
+src="https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/4730/live/ef3437a0-1f1f-11f1-a600-6bf0292beaaf.jpg.webp"
+/>
 
 <div class="slider-text">
-<h2 id="sliderTitle">Noticias destacadas</h2>
+
+<h2>Noticias destacadas</h2>
+
 </div>
 
 </div>
@@ -70,49 +94,61 @@ Tema
 
 
 <!-- CONTENIDO -->
+
 <main class="container mx-auto px-4 py-8">
 
 <!-- CATEGORIAS -->
+
 <div class="flex flex-wrap gap-3 mb-10 justify-center">
 
-<button class="category-btn cat-all" data-category="all">
-Todas
-</button>
-
-<button class="category-btn cat-edu" data-category="educacion">
-Educación
-</button>
+<button class="category-btn cat-all" data-category="all">Todas</button>
 
 <button class="category-btn cat-ciencia" data-category="ciencia">
 Ciencia
-</button>
-
-<button class="category-btn cat-mexico" data-category="mexico">
-México
 </button>
 
 <button class="category-btn cat-mundo" data-category="mundo">
 Mundo
 </button>
 
+<button class="category-btn cat-cultura" data-category="cultura">
+Cultura
+</button>
+
 </div>
 
-<!-- GRID NOTICIAS -->
-<div id="newsGrid"
-class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+<!-- MENSAJE CARGA -->
+
+<div id="statusMessage" class="text-center mb-6 hidden">
+
+<div class="loader">
+Cargando noticias...
 </div>
+
+</div>
+
+
+<!-- GRID NOTICIAS -->
+
+<div
+id="newsGrid"
+class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+></div>
 
 </main>
 
 
 <!-- FOOTER -->
+
 <footer class="footer">
 
 <p>
-© 2026 NOTICIAS EXPRESS
+© 2026 Noticias Express
 </p>
 
 </footer>
+
 
 <script src="script.js"></script>
 
