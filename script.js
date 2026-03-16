@@ -4,40 +4,40 @@
 const mockNews = {
     "articles": [
         {
-            "title": "El misterio de los agujeros negros 'errantes'",
-            "description": "Nuevas investigaciones astronómicas sugieren que miles de agujeros negros podrían estar viajando por el espacio sin una galaxia anfitriona.",
-            "urlToImage": "https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=800&q=60",
+            "title": "Anthropic, la empresa de IA que se enfrentó al Pentágono en EE.UU. y por qué esto nos concierne a todos'",
+            "description": "Mientras el mundo observaba la operación estadounidense en Venezuela y cómo la guerra con Irán se hacía inevitable, en Washington se iba fraguando una batalla que advertía que el futuro profetizado durante siglos ya es presente.",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/4730/live/ef3437a0-1f1f-11f1-a600-6bf0292beaaf.jpg.webp",
             "source": { "name": "BBC Mundo" },
             "publishedAt": "2026-03-16T09:00:00Z",
-            "url": "https://www.bbc.com/mundo",
-            "category": "ciencia"
+            "url": "https://www.bbc.com/mundo/articles/cddnjd34p7no",
+            "category": "Ciencia"
         },
         {
-            "title": "Cómo la inteligencia artificial está reescribiendo la arqueología",
-            "description": "Herramientas de IA han permitido identificar ciudades perdidas en la selva amazónica sin necesidad de excavaciones iniciales.",
-            "urlToImage": "https://images.unsplash.com/photo-1599110364868-3641fdd91883?auto=format&fit=crop&w=800&q=60",
-            "source": { "name": "The New York Times" },
-            "publishedAt": "2026-03-16T10:00:00Z",
-            "url": "https://www.nytimes.com",
-            "category": "educacion"
+            "title": "Cómo nació la histórica rivalidad entre EE.UU. y Cuba",
+            "description": "Es una de las rivalidades más longevas de la historia contemporánea. El país más poderoso del mundo frente a una isla de menos de 10 millones de habitantes.",
+            "urlToImage": "https://ichef.bbci.co.uk/ace/ws/800/cpsprodpb/5a15/live/dd561510-1cc4-11f1-a77f-65f2fdb37c23.jpg.webp",
+            "source": { "name": "BBC NEWS mundo" },
+            "publishedAt": "2026-03-15T10:00:00Z",
+            "url": "https://www.bbc.com/mundo/articles/cq6q15rdrqeo",
+            "category": "Mundo"
         },
         {
-            "title": "Inflación en México: El costo de la canasta básica en 2026",
-            "description": "Un reporte detallado sobre cómo los precios de productos esenciales han variado en las principales ciudades del país durante el primer trimestre.",
-            "urlToImage": "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=60",
-            "source": { "name": "Sol de México" },
-            "publishedAt": "2026-03-16T08:30:00Z",
-            "url": "https://oem.com.mx/elsoldemexico",
-            "category": "mexico"
+            "title": "Artemis II",
+            "description": "El primer vuelo tripulado del programa Artemis supone un paso clave hacia el regreso a largo plazo a la Luna y las futuras misiones a Marte.",
+            "urlToImage": "https://images-assets.nasa.gov/image/KSC-20230920-PH-FMX01_0467/KSC-20230920-PH-FMX01_0467~large.jpg?w=1536&h=1024&fit=crop&crop=faces%2Cfocalpoint",
+            "source": { "name": "NASA" },
+            "publishedAt": "2026-03-12T08:30:00Z",
+            "url": "https://www.nasa.gov/mission/artemis-ii/",
+            "category": "Mundo"
         },
         {
-            "title": "Desarrollo industrial en Guanajuato: Nuevas inversiones",
-            "description": "El Bajío continúa consolidándose como el centro automotriz de América Latina con la llegada de tres nuevas plantas de componentes eléctricos.",
-            "urlToImage": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=60",
+            "title": "DGuanajuato define selección de clavados tras exitoso Selectivo Nacional en León",
+            "description": "Con la clasificación de figuras como Franco Frausto y Natalia Núñez, la delegación estatal se prepara para defender su podio nacional en la próxima Olimpiada Nacional 2026.",
+            "urlToImage": "https://i0.wp.com/s3-am-btat-server.s3.amazonaws.com/wp-content/uploads/2026/03/clavados_gto_11.jpg",
             "source": { "name": "Periódico AM" },
             "publishedAt": "2026-03-16T07:45:00Z",
-            "url": "https://www.am.com.mx",
-            "category": "mexico"
+            "url": "https://www.am.com.mx/superdeportivo/2026/03/15/guanajuato-define-seleccion-de-clavados-tras-exitoso-selectivo-nacional-en-leon-1764966.html",
+            "category": "mexico" "educación"
         },
         {
             "title": "El renacimiento de las lenguas indígenas en las escuelas",
