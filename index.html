@@ -4,46 +4,109 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portal de Noticias</title>
+<title>Noticias Express - Tarea Educativa</title>
 
-<link rel="stylesheet" href="style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="styles.css">
 
 </head>
 
-<body id="appBody">
+<body id="appBody" class="theme-professional min-h-screen">
 
-<header class="header">
+<header class="text-white shadow-xl sticky top-0 z-50">
 
-<h1>Portal de Noticias</h1>
+<div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center">
 
-<div class="controls">
+<div class="flex items-center gap-3">
 
-<input type="text" id="searchInput" placeholder="Buscar noticia...">
+<div class="bg-white/20 p-2 rounded-lg">
 
-<button id="refreshBtn">Actualizar</button>
+<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+</svg>
 
 </div>
 
-<div class="categories">
+<h1 class="text-xl font-black tracking-tighter uppercase">
+Noticias Express
+</h1>
 
-<button class="category-btn active" data-category="all">Todas</button>
-<button class="category-btn" data-category="mundo">Mundo</button>
-<button class="category-btn" data-category="mexico">México</button>
-<button class="category-btn" data-category="ciencia">Ciencia</button>
-<button class="category-btn" data-category="cultura">Cultura</button>
-<button class="category-btn" data-category="salud">Salud</button>
+</div>
+
+<div class="mt-4 md:mt-0 flex gap-2">
+
+<input id="searchInput"
+type="text"
+placeholder="Buscar noticia..."
+class="px-4 py-2 rounded text-gray-800 focus:outline-none w-48 md:w-64">
+
+<button id="refreshBtn"
+class="accent-btn px-6 py-2 rounded font-bold uppercase text-xs tracking-widest">
+Actualizar
+</button>
+
+</div>
 
 </div>
 
 </header>
 
-<main>
+<div class="container mx-auto px-4 pt-6 flex justify-center md:justify-end gap-3 items-center">
 
-<div id="statusMessage">Cargando noticias...</div>
+<span class="text-[10px] uppercase font-bold opacity-50 tracking-widest mr-2">
+Estilo de lectura:
+</span>
 
-<div id="newsGrid" class="news-grid"></div>
+<button id="btn-prof" class="w-8 h-8 rounded-full bg-blue-700 border-2 border-white"></button>
+<button id="btn-mod" class="w-8 h-8 rounded-full bg-teal-600 border-2 border-white"></button>
+<button id="btn-dark" class="w-8 h-8 rounded-full bg-slate-900 border-2 border-white"></button>
+
+</div>
+
+<main class="container mx-auto px-4 py-8">
+
+<div class="flex flex-wrap gap-2 mb-10 justify-center">
+
+<button class="category-btn accent-btn px-5 py-2 rounded-full text-sm font-medium" data-category="all">Todas</button>
+
+<button class="category-btn bg-white/50 border px-5 py-2 rounded-full text-sm" data-category="ciencia">Ciencia</button>
+
+<button class="category-btn bg-white/50 border px-5 py-2 rounded-full text-sm" data-category="mexico">México</button>
+
+<button class="category-btn bg-white/50 border px-5 py-2 rounded-full text-sm" data-category="mundo">Mundo</button>
+
+<button class="category-btn bg-white/50 border px-5 py-2 rounded-full text-sm" data-category="cultura">Cultura</button>
+
+<button class="category-btn bg-white/50 border px-5 py-2 rounded-full text-sm" data-category="salud">Salud</button>
+
+</div>
+
+<div id="statusMessage" class="text-center mb-6 hidden">
+
+<div class="inline-flex items-center px-4 py-2 font-semibold text-sm shadow rounded-md text-white bg-indigo-500">
+
+<div class="animate-spin h-4 w-4 mr-3 border-2 border-white border-t-transparent rounded-full"></div>
+
+Cargando noticias...
+
+</div>
+
+</div>
+
+<div id="newsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
 
 </main>
+
+<footer class="bg-black/10 py-12 mt-12 text-center border-t border-gray-200">
+
+<p class="text-sm font-black opacity-75 uppercase tracking-tighter">
+
+© 2026 NOTICIAS EXPRESS
+
+</p>
+
+</footer>
 
 <script src="script.js"></script>
 
